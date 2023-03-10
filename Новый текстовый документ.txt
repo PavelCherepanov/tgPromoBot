@@ -1,0 +1,3 @@
+cd C:\Users\Pavel\Desktop\tgPromoKod
+venv\Scripts\activate
+python bot.py
