@@ -32,7 +32,7 @@ def check_time():
             time.sleep(60*60*24-60*60*int(generate_random_time()[0: 2]))
     
 
-@bot.message_handler(commands=["start", "help", "получить"])
+@bot.message_handler(commands=["start", "help"])
 def send_promo(message):
     global flag
     if(flag == True):
@@ -53,6 +53,6 @@ def send_message_in_group():
 
 
 if __name__ == "__main__":
-    thr1 = threading.Thread(target = check_time)
-    thr1.start()
+    thr = threading.Thread(target = check_time)
+    thr.start()
     bot.polling(none_stop=True, interval=0)
